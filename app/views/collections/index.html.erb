@@ -18,6 +18,7 @@
     <td><%= link_to 'Show', collection %></td>
     <td><%= link_to 'Edit', edit_collection_path(collection) %></td>
     <td><%= link_to 'Destroy', collection, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Cars', show_cars_collections_path(cars) %></td>
   </tr>
 <% end %>
 </table>
@@ -25,3 +26,5 @@
 <br />
 
 <%= link_to 'New Collection', new_collection_path %>
+
+<%= link_to "Cars", cars_path %>

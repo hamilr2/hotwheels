@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110327223421) do
+ActiveRecord::Schema.define(:version => 20110327232824) do
 
   create_table "cars", :force => true do |t|
     t.date     "date_acquired"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(:version => 20110327223421) do
     t.string   "variation"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "cars_collections", :id => false, :force => true do |t|
+    t.integer "car_id"
+    t.integer "collection_id"
   end
 
   create_table "castings", :force => true do |t|

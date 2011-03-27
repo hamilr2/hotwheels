@@ -80,4 +80,21 @@ class CollectionsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+  def show_cars
+    @collection = Collection.find(params[:id])
+  end
+
+  def save
+    @collection = Collection.find(params[:id])
+    @car = Car.find(params[:car])
+    if params[:show] == "true"
+      @collection.cars << @car
+    else
+      @collection.cars.delete(@car)
+    end
+    @collection.save!
+    render :nothing => true
+  end
 end
