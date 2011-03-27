@@ -1,4 +1,4 @@
 class Collection < ActiveRecord::Base
-  has_many :cars
+  has_and_belongs_to_many :cars
   belongs_to :user
 end
