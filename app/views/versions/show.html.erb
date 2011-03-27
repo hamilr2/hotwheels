@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Main color:</b>
+  <%= @version.main_color %>
+</p>
+
+<p>
+  <b>Base color:</b>
+  <%= @version.base_color %>
+</p>
+
+<p>
+  <b>Wheel:</b>
+  <%= @version.wheel_id %>
+</p>
+
+<p>
+  <b>Markings:</b>
+  <%= @version.markings %>
+</p>
+
+<p>
+  <b>Color2:</b>
+  <%= @version.color2 %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @version.year %>
+</p>
+
+<p>
+  <b>Series:</b>
+  <%= @version.series %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @version.country %>
+</p>
+
+<p>
+  <b>Casting:</b>
+  <%= @version.casting_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_version_path(@version) %> |
+<%= link_to 'Back', versions_path %>

@@ -1,0 +1,31 @@
+<h1>Listing cars</h1>
+
+<table>
+  <tr>
+    <th>Date acquired</th>
+    <th>Version</th>
+    <th>Desc</th>
+    <th>Base code</th>
+    <th>Variation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cars.each do |car| %>
+  <tr>
+    <td><%= car.date_acquired %></td>
+    <td><%= car.version_id %></td>
+    <td><%= car.desc %></td>
+    <td><%= car.base_code %></td>
+    <td><%= car.variation %></td>
+    <td><%= link_to 'Show', car %></td>
+    <td><%= link_to 'Edit', edit_car_path(car) %></td>
+    <td><%= link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Car', new_car_path %>

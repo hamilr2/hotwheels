@@ -1,0 +1,39 @@
+<h1>Listing versions</h1>
+
+<table>
+  <tr>
+    <th>Main color</th>
+    <th>Base color</th>
+    <th>Wheel</th>
+    <th>Markings</th>
+    <th>Color2</th>
+    <th>Year</th>
+    <th>Series</th>
+    <th>Country</th>
+    <th>Casting</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @versions.each do |version| %>
+  <tr>
+    <td><%= version.main_color %></td>
+    <td><%= version.base_color %></td>
+    <td><%= version.wheel_id %></td>
+    <td><%= version.markings %></td>
+    <td><%= version.color2 %></td>
+    <td><%= version.year %></td>
+    <td><%= version.series %></td>
+    <td><%= version.country %></td>
+    <td><%= version.casting_id %></td>
+    <td><%= link_to 'Show', version %></td>
+    <td><%= link_to 'Edit', edit_version_path(version) %></td>
+    <td><%= link_to 'Destroy', version, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Version', new_version_path %>

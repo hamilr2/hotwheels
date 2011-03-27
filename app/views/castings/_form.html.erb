@@ -1,0 +1,33 @@
+<%= form_for(@casting) do |f| %>
+  <% if @casting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@casting.errors.count, "error") %> prohibited this casting from being saved:</h2>
+
+      <ul>
+      <% @casting.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br />
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer_id %><br />
+    <%= f.text_field :manufacturer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :scale %><br />
+    <%= f.text_field :scale %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

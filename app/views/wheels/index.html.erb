@@ -1,0 +1,27 @@
+<h1>Listing wheels</h1>
+
+<table>
+  <tr>
+    <th>Wheel style</th>
+    <th>Color</th>
+    <th>Color2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wheels.each do |wheel| %>
+  <tr>
+    <td><%= wheel.wheel_style_id %></td>
+    <td><%= wheel.color %></td>
+    <td><%= wheel.color2 %></td>
+    <td><%= link_to 'Show', wheel %></td>
+    <td><%= link_to 'Edit', edit_wheel_path(wheel) %></td>
+    <td><%= link_to 'Destroy', wheel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wheel', new_wheel_path %>

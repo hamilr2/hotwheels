@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @wheel_style.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @wheel_style.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_wheel_style_path(@wheel_style) %> |
+<%= link_to 'Back', wheel_styles_path %>

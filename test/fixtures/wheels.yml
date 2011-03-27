@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  wheel_style_id: 1
+  color: MyString
+  color2: MyString
+
+two:
+  wheel_style_id: 1
+  color: MyString
+  color2: MyString

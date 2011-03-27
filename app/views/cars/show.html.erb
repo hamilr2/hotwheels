@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date acquired:</b>
+  <%= @car.date_acquired %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @car.version_id %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @car.desc %>
+</p>
+
+<p>
+  <b>Base code:</b>
+  <%= @car.base_code %>
+</p>
+
+<p>
+  <b>Variation:</b>
+  <%= @car.variation %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date_acquired: 2011-03-27
+  version_id: 1
+  desc: MyString
+  base_code: MyString
+  variation: MyString
+
+two:
+  date_acquired: 2011-03-27
+  version_id: 1
+  desc: MyString
+  base_code: MyString
+  variation: MyString

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  main_color: MyString
+  base_color: MyString
+  wheel_id: 1
+  markings: MyString
+  color2: MyString
+  year: 1
+  series: MyString
+  country: MyString
+  casting_id: 1
+
+two:
+  main_color: MyString
+  base_color: MyString
+  wheel_id: 1
+  markings: MyString
+  color2: MyString
+  year: 1
+  series: MyString
+  country: MyString
+  casting_id: 1
