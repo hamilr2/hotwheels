@@ -11,7 +11,7 @@ Hotwheels::Application.routes.draw do
 
   resources :cars
 
-  resources :collections, :member => {:show_cars => :get, :save => :post }
+  resources :collection
 
   resources :users
 
