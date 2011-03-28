@@ -17,7 +17,7 @@
 
 <ul>
 <%  @collection.cars.each do |car| %>
-<li><%= car.id %></li>
+<li><%= car.version.color %> <%= car.version.casting.name %> </li>
 <% end %>
 </ul>
 
