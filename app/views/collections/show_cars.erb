@@ -6,7 +6,7 @@
     <th>Car</th>
   </tr>
 
-  <% @collection.car.list_cars.each do |c| %>
+  <% @collection.car.list_of_cars.each do |c| %>
   <tr>
     <td><%=check_box_tag c.id, 1, @collection.has_car?(c),
   :onclick => remote_function(
