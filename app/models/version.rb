@@ -1,4 +1,5 @@
 class Version < ActiveRecord::Base
-  has_one :casting
+  belongs_to :casting
+  has_many :car
   has_one :wheel
 end
