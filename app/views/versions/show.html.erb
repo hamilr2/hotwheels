@@ -42,9 +42,9 @@
 
 <p>
   <b>Casting:</b>
-  <%= @version.casting_id %>
+  <%= link_to "#{@version.casting.name}",casting_path(@version.casting_id) %>
 </p>
 
 
 <%= link_to 'Edit', edit_version_path(@version) %> |
-<%= link_to 'Back', versions_path %>
+<%= link_to 'Back to Versions', versions_path %>

@@ -16,8 +16,7 @@
     <%= f.date_select :date_acquired %>
   </div>
   <div class="field">
-    <%= f.label :version_id %><br />
-    <%= f.text_field :version_id %>
+    <%= collection_select(:car, :version_id, @versions, :id, :casting_string, {:prompt => false}) %>
   </div>
   <div class="field">
     <%= f.label :desc %><br />

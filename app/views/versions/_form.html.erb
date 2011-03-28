@@ -44,8 +44,7 @@
     <%= f.text_field :country %>
   </div>
   <div class="field">
-    <%= f.label :casting_id %><br />
-    <%= f.text_field :casting_id %>
+    <%= collection_select(:version, :casting_id, @castings, :id, :name, {:prompt => false}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

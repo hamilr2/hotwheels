@@ -15,7 +15,7 @@
 <% @cars.each do |car| %>
   <tr>
     <td><%= car.date_acquired %></td>
-    <td><%= car.version_id %></td>
+    <td><%= link_to "#{car.version.casting_string}",version_path(car.version_id) %></td>
     <td><%= car.desc %></td>
     <td><%= car.base_code %></td>
     <td><%= car.variation %></td>

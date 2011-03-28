@@ -3,6 +3,7 @@ class VersionsController < ApplicationController
   # GET /versions.xml
   def index
     @versions = Version.all
+    @castings = Casting.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,6 +27,8 @@ class VersionsController < ApplicationController
   def new
     @version = Version.new
 
+    @castings = Casting.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @version }
@@ -35,6 +38,7 @@ class VersionsController < ApplicationController
   # GET /versions/1/edit
   def edit
     @version = Version.find(params[:id])
+    @castings = Casting.all
   end
 
   # POST /versions
