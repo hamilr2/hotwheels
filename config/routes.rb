@@ -11,7 +11,7 @@ Hotwheels::Application.routes.draw do
 
   resources :cars
 
-  resources :collection
+  resources :collections
 
   resources :users
 
