@@ -7,6 +7,7 @@
     <th>Desc</th>
     <th>Base code</th>
     <th>Variation</th>
+    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,8 @@
     <td><%= car.desc %></td>
     <td><%= car.base_code %></td>
     <td><%= car.variation %></td>
+    <td><%= if car.images.empty? then else link_to image_tag(car.images.first.src, :height => 30, :alt => car.version.casting_string), car.images.first end %></td>
+    <td><%= car.user.name %></td>
     <td><%= link_to 'Show', car %></td>
     <td><%= link_to 'Edit', edit_car_path(car) %></td>
     <td><%= link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete %></td>

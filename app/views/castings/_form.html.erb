@@ -20,8 +20,7 @@
     <%= f.text_field :copyright %>
   </div>
   <div class="field">
-    <%= f.label :manufacturer_id %><br />
-    <%= f.text_field :manufacturer_id %>
+    <%= collection_select(:casting, :manufacturer_id, @manufacturers, :id, :name, {:prompt => false}) %>
   </div>
   <div class="field">
     <%= f.label :scale %><br />

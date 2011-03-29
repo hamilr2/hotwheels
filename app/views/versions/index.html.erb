@@ -26,7 +26,7 @@
     <td><%= version.year %></td>
     <td><%= version.series %></td>
     <td><%= version.country %></td>
-    <td><%= @castings.find(version.casting_id).first.name %></td>
+    <td><%= link_to version.casting.name, version.casting %></td>
     <td><%= link_to 'Show', version %></td>
     <td><%= link_to 'Edit', edit_version_path(version) %></td>
     <td><%= link_to 'Destroy', version, :confirm => 'Are you sure?', :method => :delete %></td>

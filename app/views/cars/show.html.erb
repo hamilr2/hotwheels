@@ -7,7 +7,7 @@
 
 <p>
   <b>Version:</b>
-  <%= @car.version.casting_string %>
+  <%= link_to @car.version.casting_string, @car.version %>
 </p>
 
 <p>
@@ -25,6 +25,14 @@
   <%= @car.variation %>
 </p>
 
+<p>
+  <b>User:</b>
+  <%= link_to @car.user.name, @car.user %>
+</p>
+
+<p>
+  <%= if @car.images.empty? then else link_to image_tag(@car.images.first.src, :height => 300, :alt => @car.images.first.name), @car.images.first end%>
+</p>
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

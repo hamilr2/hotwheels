@@ -25,7 +25,7 @@ class CastingsController < ApplicationController
   # GET /castings/new.xml
   def new
     @casting = Casting.new
-
+    @manufacturers = Manufacturer.all
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @casting }
@@ -35,6 +35,7 @@ class CastingsController < ApplicationController
   # GET /castings/1/edit
   def edit
     @casting = Casting.find(params[:id])
+    @manufacturers = Manufacturer.all
   end
 
   # POST /castings

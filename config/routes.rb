@@ -1,4 +1,6 @@
 Hotwheels::Application.routes.draw do
+  resources :images
+
   resources :manufacturers
 
   resources :wheel_styles

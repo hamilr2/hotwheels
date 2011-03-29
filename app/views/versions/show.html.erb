@@ -42,9 +42,21 @@
 
 <p>
   <b>Casting:</b>
-  <%= link_to "#{@version.casting.name}",casting_path(@version.casting_id) %>
+  <%= link_to "#{@version.casting.name}", @version.casting %>
 </p>
-
+<p><b>Cars using this Version:</b></p>
+<ul>
+  <% @version.cars.each do |car| %>
+  <li><%= link_to car.version.casting_string, car %></li>
+  <% end %>
+</ul>
+<p>Images of cars using this version:</p>
+<p>
+  <% @version.cars.each do |car| %>
+  <% if !car.images.empty? then car.images.each do |image| %>
+  <%= link_to image_tag(image.src,:height=>100), image %>
+  <% end end end %>
+</p>
 
 <%= link_to 'Edit', edit_version_path(@version) %> |
 <%= link_to 'Back to Versions', versions_path %>

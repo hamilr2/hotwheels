@@ -12,12 +12,28 @@
 
 <p>
   <b>Manufacturer:</b>
-  <%= @casting.manufacturer_id %>
+  <%= @casting.manufacturer.name %>
 </p>
 
 <p>
   <b>Scale:</b>
   <%= @casting.scale %>
+</p>
+
+<p><b>Versions using this Casting:</b></p>
+<ul>
+  <% @casting.versions.each do |version| %>
+  <li><%= link_to version.casting_string, version %></li>
+  <% end %>
+</ul>
+
+<p><b>Images of cars using this Casting:</b></p>
+<p>
+  <% @casting.versions.each do |version| %>
+  <% version.cars.each do |car| %>
+  <% if !car.images.empty? then car.images.each do |image| %>
+  <%= link_to image_tag(image.src,:height=>100), image %>
+  <% end end end end %>
 </p>
 
 
